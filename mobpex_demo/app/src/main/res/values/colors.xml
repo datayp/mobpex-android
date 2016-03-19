@@ -1,0 +1,11 @@
+<resources>
+    <color name="editText">#AAAAAA</color>
+    <color name="gray">#bbbbbb</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#359E42</color>
+    <color name="red">#ff5500</color>
+    <color name="green">#009900</color>
+    <color name="black">#333333</color>
+    <color name="gray_char">#666666</color>
+    <color name="gray_line">#c5c5c5</color>
+</resources>

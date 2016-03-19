@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">魔派支付</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+ <string name="appName">demoapp</string>
+    <string name="ok">完成</string>
+    <string name="wechat">微信</string>
+    <string name="alipay">支付宝</string>
+    <string name="upmp">银联</string>
+    <string name="yeepay">易宝支付</string>
+    <string name="amount">支付金额</string>
+</resources>
