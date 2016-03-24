@@ -79,6 +79,7 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
 
 ###四、发起支付
 ------
+<pre><code>
     String charge;
     Intent intent = new Intent();
     String packageName = getPackageName();
@@ -86,13 +87,13 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
     intent.setComponent(componentName);
     intent.putExtra(MobpexPaymentActivity.EXTRA_CHARGE, charge);
     startActivityForResult(intent, REQUEST_CODE_PAYMENT);
-
+</pre></code>
     说明: 上述发起方式是 mobpex client-sdk 唯一公开调用方式， “.wxapi.WXPayEntryActivity“ 是所有渠道支付的入口，并非只是微信支付入口。
     详见demo工程。
     
 ###五、获取支付状态
   从 Activity 的 onActivityResult 方法中获得支付结果(最终支付成功请根据服务端异步通知为准！)。
-
+<pre><code>
    @Override
    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// 支付页面返回处理
@@ -114,9 +115,8 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
 			}
 		}
 	}
- 
+ </pre></code>
      
-    
 ###六、混淆设置
 用户进行 apk 混淆打包的时候，为了不影响 mobpex SDK 以及渠道 SDK 的使用，具体请参考demo工程中 proguard-cfg文件。 
         
@@ -129,11 +129,12 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
      
 ###【注意事項】
 
-1、mobpex SDK 适用于支付宝、银联、易宝、微信四个渠道。
-2、wx 渠道是通过向微信客户端发起请求进行支付的，要求：
- (1)、手机必须安装微信。
- (2)、应用包名和签名必须与填写在微信平台上的一致，微信平台上的签名需是 MD5 且不带冒号的格式。
- (3)、调试的时候必须打包出来测试，否则无法调用微信支付控件。
+1、mobpex SDK 适用于支付宝、银联、易宝、微信四个渠道;<br>
+2、wx 渠道是通过向微信客户端发起请求进行支付的 
+要求：<br>
+ (1)、手机必须安装微信。<br>
+ (2)、应用包名和签名必须与填写在微信平台上的一致，微信平台上的签名需是 MD5 且不带冒号的格式。<br>
+ (3)、调试的时候必须打包出来测试，否则无法调用微信支付控件。<br>
     
  
             
