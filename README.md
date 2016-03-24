@@ -1,12 +1,11 @@
 Android Mobpex-SDK接入指南
 ========================
 
-###一、快速体验
+###一、快速集成
 ------
 mobpex SDK 适用于支付宝、银联、易宝、微信四个渠道。
 mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接入流程。下载 clent-sdk 之后将 demo 目录导入到您的 AndroidStudio 之中。
 
-###二、快速集成 
      添加依赖包
      1. alipaySDK-xxxxxxxx.jar
      2. libammsdk.jar
