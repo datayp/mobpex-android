@@ -4,7 +4,7 @@ Android Mobpex-SDK接入指南
 ###一、快速体验
 ------
 mobpex SDK 适用于支付宝、银联、易宝、微信四个渠道。
-mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接入流程。下载 clent-sdk 之后将 demo 目录导入到您的 eclipse 或者 AndroidStudio 之中。
+mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接入流程。下载 clent-sdk 之后将 demo 目录导入到您的 AndroidStudio 之中。
 
 ###二、快速集成 
      添加依赖包
@@ -21,10 +21,8 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
             jniLibs.srcDirs = ['libs']
         }
     }
-
-    
     AndroidManifest.xml 中注册 activity
- 
+    <code>
 	 <!-- 支付宝 sdk -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
@@ -38,7 +36,6 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
             android:exported="false"
             android:screenOrientation="behind" >
         </activity>
-
        <!-- mobpex SDK 注册 -->
         <activity
             android:name="com.mobpex.plug.MobpexPaymentActivity"
@@ -62,7 +59,6 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
         <uses-library
             android:name="org.simalliance.openmobileapi"
             android:required="false" /> 
-
 	               
 ###二、权限声明
     1、微信支付渠道是通过向“微信“客户端发起请求进行支付的，要求手机必须安装微信。如果没有安装微信，mobpex sdk 会在支付结果中给予通知。不需要额外权限。
@@ -122,9 +118,9 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
      
     
 ###六、混淆设置
-###用户进行 apk 混淆打包的时候，为了不影响 mobpex SDK 以及渠道 SDK 的使用，具体请参考demo工程中 proguard-cfg文件。 
+用户进行 apk 混淆打包的时候，为了不影响 mobpex SDK 以及渠道 SDK 的使用，具体请参考demo工程中 proguard-cfg文件。 
         
-###日志开关
+日志开关
 
     sdk 提供了日志功能，默认日志为关闭状态。
     开发者可以通过下面设置打开日志开关。通过 "mobpex" 来对日志进行筛选。
