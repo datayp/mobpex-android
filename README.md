@@ -75,7 +75,7 @@ mobpex SDK 为开发者提供了 demo 程序，可以快速体验 client-sdk 接
     <uses-feature android:name="android.hardware.nfc.hce" />
 
 ###三、获得 Charge 对象(支付凭证)
-   在 Server 使用 Mobpex Server SDK 获取 Charge 对象后，Server 会将该对象传给 Client 。客户端需要接收该 Charge 对象，并将此传给 Client SDK 以调起支付控件。关于 Server 如何获取 Charge 对象，详见 Server 接入指南。
+   在 Server 使用 Mobpex Server SDK 获取 Charge 对象后，Server 会将该对象传给 Client 。客户端需要接收该 Charge 对象，并将此传给 Client SDK 以调起支付控件。关于 Server 如何获取 Charge 对象，详见 <a href='https://github.com/datayp/mobpex-java'>Server 接入指南</a>。
 
 ###四、发起支付
 ------
