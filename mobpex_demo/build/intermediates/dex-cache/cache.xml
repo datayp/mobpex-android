@@ -2,46 +2,67 @@
 <items version="2" >
 
     <item
-        jar="D:\mobpex\mobpex_demo\app\libs\alipaySdk-20151215.jar"
+        jar="C:\Users\simon.xin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.4.0\40340c0748190fe897baf7bffbc1b282734294e5\okhttp-2.4.0.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="a06f7968d9f7fcc8f23e1757d30ff5d98fa838e4">
-        <dex dex="D:\mobpex\mobpex_demo\app\build\intermediates\pre-dexed\debug\alipaySdk-20151215_9b1c95e2e5e86e9849b9305cd2875b1efbf67c4d.jar" />
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\okhttp-2.4.0_985d174e28d62d04c78a2d8b4bbe96359de77c94.jar" />
     </item>
     <item
-        jar="D:\mobpex\mobpex_demo\app\libs\mobpexSdk.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="62a1a44dd05504dac2c7ac75342e372dbd004937">
-        <dex dex="D:\mobpex\mobpex_demo\app\build\intermediates\pre-dexed\debug\mobpexSdk_0fa2f0108dc358ce5394ac9b0ae726d06dd0f98e.jar" />
-    </item>
-    <item
-        jar="D:\mobpex\mobpex_demo\app\libs\UPPayPluginExPro.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c9de05e5c153c59c86720e52ebef0a62d428fcea">
-        <dex dex="D:\mobpex\mobpex_demo\app\build\intermediates\pre-dexed\debug\UPPayPluginExPro_d1a329516023f84c3567904acc621b439bda41c7.jar" />
-    </item>
-    <item
-        jar="D:\mobpex\mobpex_demo\app\libs\android-support-v4.jar"
+        jar="D:\mobpex\pros\mobpex-android\mobpex_demo\app\libs\android-support-v4.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="5896b0a4e377ac4242eb2bc785220c1c4fc052f4">
-        <dex dex="D:\mobpex\mobpex_demo\app\build\intermediates\pre-dexed\debug\android-support-v4_2eb0e72f8c13196ffaa73ae7c043012d0fd84952.jar" />
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\android-support-v4_3a7a94d1981edb4d793d5cb6d38dd06120d8fb53.jar" />
     </item>
     <item
-        jar="D:\mobpex\mobpex_demo\app\libs\UPPayAssistEx.jar"
+        jar="D:\mobpex\pros\mobpex-android\mobpex_demo\app\libs\UPPayPluginExPro.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="8efbcbe3b773b9d75050c5ba6dec8d21ca30b1e1">
-        <dex dex="D:\mobpex\mobpex_demo\app\build\intermediates\pre-dexed\debug\UPPayAssistEx_9010ccbebe18942251f301e33d37fa8d9bc256b5.jar" />
+        sha1="c9de05e5c153c59c86720e52ebef0a62d428fcea">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\UPPayPluginExPro_0fee1875650070d6fdb1b6fa69cafaf7bbac7e50.jar" />
     </item>
     <item
-        jar="D:\mobpex\mobpex_demo\app\libs\libammsdk.jar"
+        jar="C:\Users\simon.xin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha1\support-annotations-24.0.0-alpha1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b8062546971a3d196343232a19a3c0016272ba47">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha1_86e53f84b6f30218fc92d64fb4aaa991b0818e0c.jar" />
+    </item>
+    <item
+        jar="D:\mobpex\pros\mobpex-android\mobpex_demo\app\libs\libammsdk.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="47f4993168154fa73377d7470b9f6887d48a8023">
-        <dex dex="D:\mobpex\mobpex_demo\app\build\intermediates\pre-dexed\debug\libammsdk_e752924888e733ed1f5f637d4096fff5b29dd2e5.jar" />
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\libammsdk_4b708c22778473bdcb9853d7c540205500855dfa.jar" />
+    </item>
+    <item
+        jar="D:\mobpex\pros\mobpex-android\mobpex_demo\app\libs\mobpexSdk.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f78990aef4b12ebf3579709a145dee5c1baed106">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\mobpexSdk_7c7967f46cad96b847a0ce594bbc84b68f7e1813.jar" />
+    </item>
+    <item
+        jar="D:\mobpex\pros\mobpex-android\mobpex_demo\app\libs\alipaySdk-20151215.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a06f7968d9f7fcc8f23e1757d30ff5d98fa838e4">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\alipaySdk-20151215_f2b96756c8420d1901d37ad77916f8a8d8dac42e.jar" />
+    </item>
+    <item
+        jar="D:\mobpex\pros\mobpex-android\mobpex_demo\app\libs\UPPayAssistEx.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8efbcbe3b773b9d75050c5ba6dec8d21ca30b1e1">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\UPPayAssistEx_85b77181c511614b7427cee84c60ee5ff4294dd4.jar" />
+    </item>
+    <item
+        jar="C:\Users\simon.xin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="D:\mobpex\pros\mobpex-android\mobpex_demo\app\build\intermediates\pre-dexed\debug\okio-1.6.0_d91f5daecb519ec1a3bbf5094bc00cb60571f4cf.jar" />
     </item>
 
 </items>

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 21
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.mobpex.sdk"
@@ -23,5 +23,9 @@ dependencies {
     compile files('libs/UPPayAssistEx.jar')
     compile files('libs/UPPayPluginExPro.jar')
     compile files('libs/mobpexSdk.jar')
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.android.support:support-annotations:24.0.0-alpha1'
+    //    compile project(':mobpexSdk')
 }
 

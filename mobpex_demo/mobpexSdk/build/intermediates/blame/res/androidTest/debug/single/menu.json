@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\workspace\\mobpex_demo\\mobpexSdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\main.xml",
+        "source": "D:\\workspace\\mobpex_demo\\mobpexSdk\\build\\intermediates\\bundles\\debug\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\mobpex\\pros\\mobpex-android\\mobpex_demo\\mobpexSdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\main.xml",
+        "source": "D:\\mobpex\\pros\\mobpex-android\\mobpex_demo\\mobpexSdk\\build\\intermediates\\bundles\\debug\\res\\menu\\main.xml"
+    }
+]

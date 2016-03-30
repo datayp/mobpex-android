@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 
+
 /**
  * @author xin.wu
  *
@@ -97,6 +98,7 @@ public class PaymentActivity extends Activity implements View.OnClickListener {
 		return sb.toString();
 	}
 
+	String charge = "";
 	@SuppressLint("NewApi")
 	public class HttpTask extends AsyncTask<String, String, String> {
 		private HashMap<String, String> paramMap;
@@ -107,9 +109,9 @@ public class PaymentActivity extends Activity implements View.OnClickListener {
 
 		@Override
 		protected String doInBackground(String[] params) {
-			String charge = "";
 			try {
 				charge = WebUtils.doPost(URL, paramMap);
+
 			} catch (Exception e) {
 			}
 			return charge;
@@ -118,10 +120,14 @@ public class PaymentActivity extends Activity implements View.OnClickListener {
 		@Override
 		protected void onPostExecute(String charge) {
 			dismiss();
-			if (charge != null) {
+			if (!charge.isEmpty()) {
 				onExecute(charge);
 			}
 		}
+	}
+
+	public  class  Res{
+		String string;
 	}
 
 	public void onPay(String channel) {

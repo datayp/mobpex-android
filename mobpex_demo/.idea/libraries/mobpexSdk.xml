@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mobpexSdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/mobpexSdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,6 +1,5 @@
 package com.mobpex.sdk;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.mobpex.plug.utils.MobpexLog;
@@ -284,7 +283,6 @@ public abstract class WebUtils {
 		return rsp;
 	}
 
-	@SuppressLint("NewApi")
 	private static HttpURLConnection getConnection(URL url, String method, String ctype, Map<String, String> headerMap)
 			throws IOException {
 
@@ -292,42 +290,22 @@ public abstract class WebUtils {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		if (conn instanceof HttpsURLConnection) {
 			HttpsURLConnection connHttps = (HttpsURLConnection) conn;
-			initVerisgn();
-			if (ignoreSSLCheck) {
-				try {
-					SSLContext ctx = SSLContext.getInstance("TLSV1.2");
-					ctx.init(null, new TrustManager[] { new TrustAllTrustManager() }, new SecureRandom());
-					connHttps.setSSLSocketFactory(ctx.getSocketFactory());
-					connHttps.setHostnameVerifier(new HostnameVerifier() {
-						public boolean verify(String hostname, SSLSession session) {
-							return true;
-						}
-					});
-				} catch (Exception e) {
-					throw new IOException(e);
-				}
-			} else {
-				try {
-					SSLContext ctx = SSLContext.getInstance("TLSV1.2");
-					ctx.init(null, new TrustManager[] { new VerisignTrustManager() }, new SecureRandom());
-					connHttps.setSSLSocketFactory(ctx.getSocketFactory());
-				} catch (Exception e) {
-					throw new IOException(e);
-				}
+			try {
+				SSLContext ctx = SSLContext.getInstance("TLSV1.2");
+				ctx.init(null, new TrustManager[] { new TrustAllTrustManager() }, new SecureRandom());
+				connHttps.setSSLSocketFactory(ctx.getSocketFactory());
+				connHttps.setHostnameVerifier(new HostnameVerifier() {
+					public boolean verify(String hostname, SSLSession session) {
+						return true;
+					}
+				});
+			} catch (Exception e) {
+				throw new IOException(e);
 			}
-			//			try {
-			//				KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
-			//				trustStore.load(null, null);
-			//				SSLSocketFactory sf = new SSLSocketFactoryEx(trustStore);
-			//				sf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER); // 允许所有主机的验证
-			//			} catch (Exception e) {
-			//				// TODO Auto-generated catch block
-			//				e.printStackTrace();
-			//			}
-			// Install the all-trusting trust manager
 			conn = connHttps;
 		}
-
+//		HostnameVerifier hostnameVerifier = SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER;
+//		HttpsURLConnection.setDefaultHostnameVerifier(hostnameVerifier);
 		conn.setRequestMethod(method);
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
