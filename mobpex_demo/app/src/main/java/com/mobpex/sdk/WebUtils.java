@@ -37,7 +37,7 @@ public abstract class WebUtils {
 	private static final String METHOD_POST = "POST";
 	private static final String METHOD_GET = "GET";
 	private static Certificate verisign = null; // 根证书
-	private static boolean ignoreSSLCheck = false; // 忽略SSL检查
+	private static boolean ignoreSSLCheck = true; // 忽略SSL检查
 	public static Context mContext;
 
 	public WebUtils(Context context){
@@ -304,8 +304,6 @@ public abstract class WebUtils {
 			}
 			conn = connHttps;
 		}
-//		HostnameVerifier hostnameVerifier = SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER;
-//		HttpsURLConnection.setDefaultHostnameVerifier(hostnameVerifier);
 		conn.setRequestMethod(method);
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
@@ -362,7 +360,7 @@ public abstract class WebUtils {
 				} else {
 					hasParam = true;
 				}
-
+//				query.append(name).append("=").append(value);
 				query.append(name).append("=").append(URLEncoder.encode(URLEncoder.encode(value, charset), charset));
 			}
 		}

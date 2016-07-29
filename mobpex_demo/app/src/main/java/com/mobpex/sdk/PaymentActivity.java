@@ -46,9 +46,13 @@ public class PaymentActivity extends Activity implements View.OnClickListener {
 	 *【https://www.mobpex.com/yop-center/demo 】是 Mobpex 为了方便开发者体验 sdk 而提供的一个临时 url 。
 	 * 该 url 仅能调用【模拟支付控件】，开发者需要改为自己服务端的 url 。
 	 */
-	public static String URL = "https://www.mobpex.com/yop-center/demo";
-	// 修改为自己的appId
-	String appId = "16031706093671048936";
+	/**
+	 * test
+	 */
+
+	public static String URL = "https://220.181.25.235/mashup-demo/demo/submitOrder";
+//	String appId = "16031706093671048936";
+//	String appId = "1603290925342397104893671";//1603290925342397104893671 15122404366710489367
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +123,7 @@ public class PaymentActivity extends Activity implements View.OnClickListener {
 
 		@Override
 		protected void onPostExecute(String charge) {
+			MobpexLog.debug(PaymentActivity.class,"response:"+charge);
 			dismiss();
 			if (!charge.isEmpty()) {
 				onExecute(charge);
@@ -138,12 +143,12 @@ public class PaymentActivity extends Activity implements View.OnClickListener {
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		progressDialog.show();
 		String tradeNo = getRandomString(); // 订单号
-		HashMap<String, String> params = ParametersUtils.getMapParams(channel,tradeNo, amount, appId);
+		HashMap<String, String> params = ParametersUtils.getMapParams(channel,tradeNo, amount);
 		new HttpTask(params).execute();
 	}
 
+
 	private void onExecute(String charge) {
-		MobpexLog.debug(PaymentActivity.class,"response:"+charge);
 		Intent intent = new Intent();
 		String orderId = getRandomString();
 		String packageName = getPackageName();

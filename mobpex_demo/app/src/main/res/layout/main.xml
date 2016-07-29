@@ -36,8 +36,7 @@
             android:layout_marginTop="20dp"
             android:digits="1234567890.+-*/%\n()"
             android:ems="10"
-            android:hint="@string/amount"
-            android:inputType="number" />
+            android:hint="@string/amount"/>
 
         <Button
             android:id="@+id/alipayButton"
